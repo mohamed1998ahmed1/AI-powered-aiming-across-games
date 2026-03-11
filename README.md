@@ -1,46 +1,58 @@
 # AI-Powered Aiming Across Games (APAG)
 
-**APAG** هو محرك مفتوح المصدر لتحليل التصويب (Aim Analysis) والتحكم في حركة الماوس، يعتمد على الرؤية الحاسوبية (Computer Vision) ونماذج الذكاء الاصطناعي الحديثة (YOLOv8).
+**APAG** is an open-source performance analysis and input control engine for FPS games, leveraging Computer Vision and state-of-the-art Deep Learning models.
 
-### 🚀 الهدف من المشروع
+### 🎯 Purpose
 
-الهدف ليس "الغش"، بل بناء **نظام تحليل أداء احترافي** يساعد اللاعبين على تحسين "الذاكرة العضلية" (Muscle Memory) من خلال قياس دقة التصويب، تحليل زمن رد الفعل، وتطوير منحنيات حساسية الماوس (Mouse Sensitivity Curves) بشكل رياضي دقيق.
+The goal of this project is to explore the intersection of **Computer Vision** and **Human-Computer Interaction** in gaming. It focuses on analyzing aim metrics, response times, and developing mathematically precise sensitivity curves to help players study and improve their muscle memory.
 
-### 🛠 التقنيات المستخدمة
+### 🛠 Tech Stack
 
-* **Python** - اللغة الأساسية.
-* **OpenCV** - لمعالجة الصور وتحديد الإحداثيات.
-* **Ultralytics YOLOv8** - لاكتشاف اللاعبين وتتبع المفاصل (Pose Estimation).
-* **MSS** - للالتقاط السريع جداً للشاشة.
-* **Windows API** - للتحكم الدقيق في مدخلات الماوس.
+* **Python** - Core language.
+* **OpenCV** - Real-time image processing.
+* **Ultralytics YOLOv8** - Target detection and Pose Estimation.
+* **MSS** - High-speed screen capturing.
+* **Windows API** - Low-level input manipulation.
 
-### 📊 المميزات الحالية (Roadmap)
+### 📊 Features & Roadmap
 
-* [x] اكتشاف الأهداف في الوقت الفعلي باستخدام YOLOv8-pose.
-* [x] حساب المسافات الإحداثية ($dx, dy$) بدقة عالية.
-* [ ] **تحت التطوير:** نظام `Smoothing` (Interpolation) لجعل الحركة بشرية وليست روبوتية.
-* [ ] **تحت التطوير:** نظام `Telemetry` لحفظ أداء اللاعب في ملفات JSON/CSV لتحليله لاحقاً.
+* [x] **Real-time Detection:** Using YOLOv8-pose for precise keypoint tracking.
+* [x] **Coordinate Calculation:** Accurate distance mapping ($dx, dy$) for input systems.
+* [ ] **Smoothing:** Implementing advanced interpolation (Lerp) to mimic human-like movement.
+* [ ] **Telemetry System:** Storing performance metrics (accuracy, reaction time) in JSON/CSV for post-game analysis.
+* [ ] **GUI Dashboard:** A visual interface to track progress and statistics.
 
-### 🤝 كيف تساهم في المشروع؟
+### 🤝 How to Contribute
 
-نحن نرحب بأي مساهمة تجعل هذا المشروع أقوى! يمكنك المساعدة في:
+We welcome contributions from developers and researchers! You can help by:
 
-1. **تحسين أداء المعالجة (Optimization):** هل يمكنك تقليل استهلاك الـ CPU/GPU؟
-2. **تطوير منحنيات الماوس:** ابتكار معادلات رياضية تجعل الحركة أكثر سلاسة وطبيعية.
-3. **تحليل البيانات:** تصميم واجهة رسومية (Dashboard) لعرض إحصائيات دقة التصويب بعد انتهاء اللعب.
-
----
-
-### ⚠️ ملاحظة قانونية هامة (Ethics & Disclaimer)
-
-*هذا المشروع مخصص **للأغراض التعليمية والبحثية فقط**. تم تطويره لاستكشاف تطبيقات الـ Computer Vision في الألعاب. نحن لا نتحمل مسؤولية أي استخدام غير قانوني لهذا الكود في ألعاب أونلاين محمية. يرجى دائماً اتباع سياسات الاستخدام العادل لكل لعبة.*
+1. **Performance Optimization:** Improving frame processing speeds and reducing latency.
+2. **Mathematical Curves:** Designing smoother sensitivity algorithms.
+3. **Data Analysis:** Building a dashboard to visualize player performance.
 
 ---
 
-## 3 نصائح ذهبية لنشر مشروعك على GitHub:
+### ⚠️ Disclaimer
 
-1. **استخدم ملف `.gitignore`:** تأكد من إضافة `__pycache__/` و `*.pt` (ملفات الموديل الثقيلة) و `venv/` إلى ملف `.gitignore` حتى لا يتم رفع ملفات غير ضرورية أو كبيرة الحجم.
-2. **قسم الكود (Modularize):** لا تضع كل شيء في ملف واحد. ضع الموديل في ملف، والتحكم في الماوس في ملف، والتقاط الشاشة في ملف. هذا يشجع المطورين الآخرين على المساهمة لأن الكود سيكون "نظيفاً" (Clean Code).
-3. **الـ License:** ضع رخصة للمشروع (مثل `MIT License`). هذا يحمي حقوقك ويسمح للآخرين باستخدامه وتطويره بشكل قانوني.
+*This project is intended **strictly for educational and research purposes**. It was developed to explore the applications of Computer Vision in gaming environments. We do not encourage or endorse the use of this code in protected online games. Please adhere to the terms of service of any game you play.*
 
-**هل تريدني أن أساعدك في تقسيم الكود إلى ملفات منظمة ليصبح جاهزاً للرفع على GitHub بشكل احترافي؟** (هذا سيجعل المشروع يبدو وكأنه من عمل فريق من المحترفين).
+### 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+### 💡 Quick Tip for your GitHub Repository:
+
+قبل أن ترفع الكود، تأكد من إنشاء ملف باسم **`.gitignore`** وأضف فيه السطور التالية لمنع رفع الملفات الكبيرة أو ملفات البيئة:
+
+```text
+venv/
+__pycache__/
+*.pt
+*.log
+.env
+
+```
+
+**هل تود أن أقوم بتقسيم الكود الخاص بك إلى "ملفات" منظمة (Modularization) قبل أن ترفعه على GitHub ليكون أسهل في القراءة والمساهمة؟** هذا سيعطي انطباعاً بأن المشروع تم التخطيط له باحترافية.
